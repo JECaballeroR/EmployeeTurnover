@@ -203,7 +203,7 @@ nbformat==5.1.2
 nest-asyncio==1.5.1
 networkx==2.5
 nibabel==3.0.2
-nltk==3.2.5
+nltk==3.4.5
 notebook==5.3.1
 np-utils==0.5.12.1
 numba==0.51.2
@@ -253,6 +253,7 @@ psutil==5.4.8
 psycopg2==2.7.6.1
 ptyprocess==0.7.0
 py==1.10.0
+pyyaml>=4.2b1
 pyarrow==0.14.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
