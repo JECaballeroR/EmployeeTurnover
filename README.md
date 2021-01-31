@@ -21,4 +21,26 @@ A grandes rasgos, los pasos que se seguirán serán:
 En el repositorio se encuentra:
 1. data folder: Contiene los datos originales y los separados en el proceso para la prueba
 2. models folder: Contiene los Pipelines de los GridSearchCV utilizados.
-3. EmployeeTurnover.ipynb: Un JupyterNotebook con todo el ejercicio
+3. scripts folder: Contiene un .py con las funciones creadas en el notebook.
+4. images folder: Contiene plots generados en el proceso
+4. EmployeeTurnover.ipynb: Un JupyterNotebook con todo el ejercicio
+
+### Resultados finales
+## Comparación de modelos (Plot ROC-AUC):
+![Plot ROC - AUC modelos](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/ROC_AUC_final.png)
+## Resultados del mejor modelo
+
+              precision    recall  f1-score   support
+
+           0       0.97      0.95      0.96      2255
+           1       0.85      0.92      0.89       745
+
+    accuracy                           0.94      3000
+   macro avg       0.91      0.94      0.92      3000
+weighted avg       0.94      0.94      0.94      3000
+
+![Matriz de confusión y curva ROC-AUC](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/ConfMatr_ROC_AUC_Final_plot.png)
+## Feature Importance del Random Forest final:
+![Feature Importance plot](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/Feature_Importance.png)
+
+
