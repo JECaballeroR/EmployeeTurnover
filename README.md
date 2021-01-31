@@ -36,8 +36,8 @@ En el repositorio se encuentra:
            1       0.85      0.92      0.89       745
 
     accuracy                           0.94      3000
-   macro avg       0.91      0.94      0.92      3000
-weighted avg       0.94      0.94      0.94      3000
+    macro avg       0.91      0.94      0.92      3000
+    weighted avg       0.94      0.94      0.94      3000
 
 ![Matriz de confusión y curva ROC-AUC](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/ConfMatr_ROC_AUC_Final_plot.png)
 ### Feature Importance del Random Forest final:
@@ -48,5 +48,21 @@ weighted avg       0.94      0.94      0.94      3000
 * Optimizar con una mayor variedad de hiper parámetros en el GridSearchCV (por ejemplo, probar el efecto del optimizador en la Red Neuronal)
 * Migrar el KerasClassifier a [SciKeras](https://github.com/adriangb/scikeras), para poder ser exportado con joblib
 * Probar otros modelos como SVM, otras redes neuronales, otros ensemble models
+* Hacer pruebas del efecto de otros métodos para el manejo del inbalance en el dataset (podría incluirse en el pipeline del Grid Search)
 
+## Conclusiones:
 
+1. Para la predicción de la probablidad de que un empleado renuncie, para los datos usados, tienen mayor importancia:
+    - satisfaction_level
+    - time_spend_company
+    - average_montly_hours
+    - number_project
+    - last_evaluation
+
+    Dado eso, es de interés para la compañia recolectar esta información con mayor prioridad.
+
+2. Todos los modelos probados tienen un desempeño relativamente aceptable, superior al 80%. Cualquiera es "suficientemente bueno".
+    - El mejor modelo es el Random Forest. Al ser un modelo ensemble, no es de sorprender que se desempeñe mejor que otros algoritmos probados.
+3. La metodología usada puede aplicarse a otros problemas de clasificación binaria, pero es importante aclarar:
+    1. Para datasets con mas features, sería ideal aplicar algún método de selección de aquellos más relevantes (por ejemplo, PCA). El mapa de calor del Predictive Power Score puede ser un buen primer acercamiento.
+    2. Otros datasets puede que requieran un mayor cuidado para su manejo (por ejemplo, ser limpiados o aplicar alguna transformación específica a los datos). Una opción para la realización de estar tareas es generalizarlas como funciones y agregarlas en el Pipeline
