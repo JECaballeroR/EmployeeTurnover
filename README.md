@@ -25,10 +25,10 @@ En el repositorio se encuentra:
 4. images folder: Contiene plots generados en el proceso
 4. EmployeeTurnover.ipynb: Un JupyterNotebook con todo el ejercicio
 
-### Resultados finales
-## Comparación de modelos (Plot ROC-AUC):
+## Resultados finales
+### Comparación de modelos (Plot ROC-AUC) (usando los datos en "data/Test_data.csv":
 ![Plot ROC - AUC modelos](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/ROC_AUC_final.png)
-## Resultados del mejor modelo
+### Resultados del mejor modelo (sobre datos en "data/Test_data.csv")
 
               precision    recall  f1-score   support
 
@@ -40,7 +40,13 @@ En el repositorio se encuentra:
 weighted avg       0.94      0.94      0.94      3000
 
 ![Matriz de confusión y curva ROC-AUC](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/ConfMatr_ROC_AUC_Final_plot.png)
-## Feature Importance del Random Forest final:
+### Feature Importance del Random Forest final:
 ![Feature Importance plot](https://github.com/JECaballeroR/EmployeeTurnover/blob/main/images/Feature_Importance.png)
+
+
+## To do: 
+* Optimizar con una mayor variedad de hiper parámetros en el GridSearchCV (por ejemplo, probar el efecto del optimizador en la Red Neuronal)
+* Migrar el KerasClassifier a [SciKeras](https://github.com/adriangb/scikeras), para poder ser exportado con joblib
+* Probar otros modelos como SVM, otras redes neuronales, otros ensemble models
 
 
